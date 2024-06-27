@@ -73,17 +73,17 @@ def complete_task(tasks):
             return
     print(f'Task "{task_title}" not found or already completed.')
 
-# Main function
+# Main function 
 def main():
     tasks = load_tasks()
     while True:
-        print("\nTo-Do List Manager")
+        print("\nTask Manager")
         print("1. Add Task")
         print("2. Remove Task")
         print("3. List Tasks")
         print("4. Mark Task as Completed")
         print("5. Exit")
-        choice = input("Enter your choice: ")
+        choice = input("Enter your choice: ").strip()
         if choice == '1':
             add_task(tasks)
         elif choice == '2':
@@ -93,6 +93,7 @@ def main():
         elif choice == '4':
             complete_task(tasks)
         elif choice == '5':
+            print("Exiting Task Manager.")
             break
         else:
             print("Invalid choice. Please try again.")
